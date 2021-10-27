@@ -40,9 +40,10 @@ namespace dotnet_ci
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "dotnet_ci v1"));
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/api/swagger/v1/swagger.json", "dotnet_ci v1"));
 
             app.UseHttpsRedirection();
 
