@@ -3,8 +3,8 @@ name: CI master
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
+  # pull_request:
+  #   branches: [master]
 
   workflow_dispatch:
 
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Test the solution 
+      - name: Test the solution
         run: dotnet test
 
   build:

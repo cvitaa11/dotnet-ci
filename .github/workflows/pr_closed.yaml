@@ -1,4 +1,4 @@
-name: CI master
+name: CD PR closed
 
 on:
   pull_request:
