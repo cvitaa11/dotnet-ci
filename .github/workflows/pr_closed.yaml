@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Mock depoloy solution
-        run: Deploying ${GITHUB_SHA::7} version of service
+        run: echo Deploying ${GITHUB_SHA::7} version of service
