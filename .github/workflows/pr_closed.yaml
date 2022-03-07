@@ -1,0 +1,18 @@
+name: CI master
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: github.event.action == 'closed' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Mock depoloy solution
+        run: Deploying ${GITHUB_SHA::7} version of service
