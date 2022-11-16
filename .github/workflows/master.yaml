@@ -26,8 +26,10 @@ jobs:
       - name: Build container image
         run: |
           docker build -f ./dotnet-ci/Dockerfile -t ${{secrets.registry}}/${{github.repository}}:${{ github.run_number }} .
+          echo "Blank echo"
+          echo "Also this ${{secrets.registry}}"
           set CT_TEST=${{secrets.registry}}
-          echo $CT_TEST
+          echo "Hey, this is my registry $CT_TEST"
 
       - name: Container registry login
         uses: docker/login-action@v1.10.0
